@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="favOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A1A" />
+      <stop offset="60%" stop-color="#F97316" />
+      <stop offset="100%" stop-color="#EA580C" />
+    </linearGradient>
+    <linearGradient id="favTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E7490" />
+      <stop offset="100%" stop-color="#083344" />
+    </linearGradient>
+    <linearGradient id="favBar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0F3854" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle for high visibility in tabs -->
+  <circle cx="120" cy="120" r="116" fill="#FFFFFF" />
+
+  <!-- Cardinal Directions N, E, S, W -->
+  <text x="120" y="24" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="16" fill="#0F3854">N</text>
+  <text x="228" y="125" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="16" fill="#0F3854">E</text>
+  <text x="120" y="228" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="16" fill="#0F3854">S</text>
+  <text x="12" y="125" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="16" fill="#0F3854">W</text>
+
+  <!-- Outer Rings -->
+  <circle cx="120" cy="120" r="92" fill="none" stroke="#0F3854" stroke-width="5" />
+  <circle cx="120" cy="120" r="74" fill="none" stroke="#0F3854" stroke-width="3" />
+
+  <!-- Ticks -->
+  <line x1="120" y1="28" x2="120" y2="46" stroke="#0F3854" stroke-width="3.5" stroke-linecap="round" />
+  <line x1="120" y1="194" x2="120" y2="212" stroke="#0F3854" stroke-width="3.5" stroke-linecap="round" />
+  <line x1="28" y1="120" x2="46" y2="120" stroke="#0F3854" stroke-width="3.5" stroke-linecap="round" />
+  <line x1="194" y1="120" x2="212" y2="120" stroke="#0F3854" stroke-width="3.5" stroke-linecap="round" />
+
+  <!-- Growth Bars in lower quadrant -->
+  <rect x="88" y="142" width="10" height="34" rx="2" fill="url(#favBar)" />
+  <rect x="103" y="128" width="11" height="52" rx="2" fill="url(#favBar)" />
+  <rect x="119" y="112" width="12" height="72" rx="2.5" fill="url(#favBar)" />
+  <rect x="136" y="96" width="13" height="92" rx="2.5" fill="url(#favBar)" />
+
+  <!-- Compass Star Points -->
+  <polygon points="120,38 120,120 108,120" fill="#155E75" />
+  <polygon points="120,38 120,120 132,120" fill="#0C2D42" />
+  <polygon points="120,202 120,120 108,120" fill="#0C2D42" />
+  <polygon points="120,202 120,120 132,120" fill="#155E75" />
+  <polygon points="38,120 120,120 120,108" fill="#0C2D42" />
+  <polygon points="38,120 120,120 120,132" fill="#155E75" />
+  <polygon points="202,120 120,120 120,108" fill="#155E75" />
+  <polygon points="202,120 120,120 120,132" fill="#0C2D42" />
+
+  <!-- The Needle / Growth Arrow -->
+  <g transform="rotate(45, 120, 120)">
+    <path d="M 120,18 L 146,58 L 126,54 L 124,120 L 120,120 Z" fill="url(#favOrange)" />
+    <path d="M 120,18 L 94,58 L 114,54 L 116,120 L 120,120 Z" fill="url(#favTeal)" />
+    <polygon points="120,120 114,120 120,196" fill="#F97316" />
+    <polygon points="120,120 126,120 120,196" fill="#0E7490" />
+    <line x1="120" y1="20" x2="120" y2="194" stroke="#FFF" stroke-width="1.5" opacity="0.4" />
+  </g>
+
+  <!-- Center Pivot Hub -->
+  <circle cx="120" cy="120" r="16" fill="#F8FAFC" stroke="#0F3854" stroke-width="4" />
+  <circle cx="120" cy="120" r="8" fill="#0F3854" />
+  <circle cx="120" cy="120" r="3.5" fill="#FFFFFF" />
+</svg>

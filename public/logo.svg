@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 430" width="100%" height="100%">
+  <defs>
+    <!-- Gradients for realistic lighting matching the logo -->
+    <linearGradient id="orangeNeedleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A1A" />
+      <stop offset="60%" stop-color="#F97316" />
+      <stop offset="100%" stop-color="#EA580C" />
+    </linearGradient>
+
+    <linearGradient id="tealFacetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E7490" />
+      <stop offset="100%" stop-color="#083344" />
+    </linearGradient>
+
+    <linearGradient id="dialRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#155E75" />
+      <stop offset="100%" stop-color="#0F3854" />
+    </linearGradient>
+
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0F3854" />
+    </linearGradient>
+  </defs>
+
+  <!-- ================= COMPASS EMBLEM ================= -->
+  <g id="compass-emblem" transform="translate(80, 0)">
+    <!-- Cardinal Directions N, E, S, W -->
+    <text x="120" y="24" text-anchor="middle" font-family="'Montserrat', 'Inter', sans-serif" font-weight="900" font-size="16" fill="#0F3854">N</text>
+    <text x="228" y="125" text-anchor="middle" font-family="'Montserrat', 'Inter', sans-serif" font-weight="900" font-size="16" fill="#0F3854">E</text>
+    <text x="120" y="228" text-anchor="middle" font-family="'Montserrat', 'Inter', sans-serif" font-weight="900" font-size="16" fill="#0F3854">S</text>
+    <text x="12" y="125" text-anchor="middle" font-family="'Montserrat', 'Inter', sans-serif" font-weight="900" font-size="16" fill="#0F3854">W</text>
+
+    <!-- Outer Compass Track Rings -->
+    <circle cx="120" cy="120" r="92" fill="none" stroke="#0F3854" stroke-width="4.5" />
+    <circle cx="120" cy="120" r="84" fill="none" stroke="#155E75" stroke-width="2" stroke-dasharray="3 3" />
+    <circle cx="120" cy="120" r="74" fill="none" stroke="#0F3854" stroke-width="3" />
+
+    <!-- Cardinal Axis Ticks on Outer Ring -->
+    <line x1="120" y1="28" x2="120" y2="46" stroke="#0F3854" stroke-width="3.5" stroke-linecap="round" />
+    <line x1="120" y1="194" x2="120" y2="212" stroke="#0F3854" stroke-width="3.5" stroke-linecap="round" />
+    <line x1="28" y1="120" x2="46" y2="120" stroke="#0F3854" stroke-width="3.5" stroke-linecap="round" />
+    <line x1="194" y1="120" x2="212" y2="120" stroke="#0F3854" stroke-width="3.5" stroke-linecap="round" />
+
+    <!-- 45 Degree Diagonal Marks -->
+    <line x1="55" y1="55" x2="68" y2="68" stroke="#0F3854" stroke-width="2.5" />
+    <line x1="185" y1="55" x2="172" y2="68" stroke="#0F3854" stroke-width="2.5" />
+    <line x1="55" y1="185" x2="68" y2="172" stroke="#0F3854" stroke-width="2.5" />
+    <line x1="185" y1="185" x2="172" y2="172" stroke="#0F3854" stroke-width="2.5" />
+
+    <!-- Inner Semicircular Track Accent -->
+    <path d="M 46,120 A 74,74 0 0,0 194,120" fill="none" stroke="#155E75" stroke-width="6" opacity="0.25" />
+
+    <!-- Ascending Skill/Data Bar Chart Columns (Inside Lower Quadrant) -->
+    <g id="growth-bars">
+      <!-- Bar 1 -->
+      <rect x="88" y="142" width="10" height="34" rx="2" fill="url(#barGrad)" opacity="0.9" />
+      <!-- Bar 2 -->
+      <rect x="103" y="128" width="11" height="52" rx="2" fill="url(#barGrad)" opacity="0.95" />
+      <!-- Bar 3 -->
+      <rect x="119" y="112" width="12" height="72" rx="2.5" fill="url(#barGrad)" />
+      <!-- Bar 4 -->
+      <rect x="136" y="96" width="13" height="92" rx="2.5" fill="url(#barGrad)" />
+    </g>
+
+    <!-- Compass Rose Star Points (Behind Needle) -->
+    <!-- North Point -->
+    <polygon points="120,38 120,120 108,120" fill="#155E75" />
+    <polygon points="120,38 120,120 132,120" fill="#0C2D42" />
+
+    <!-- South Point -->
+    <polygon points="120,202 120,120 108,120" fill="#0C2D42" />
+    <polygon points="120,202 120,120 132,120" fill="#155E75" />
+
+    <!-- West Point -->
+    <polygon points="38,120 120,120 120,108" fill="#0C2D42" />
+    <polygon points="38,120 120,120 120,132" fill="#155E75" />
+
+    <!-- East Point -->
+    <polygon points="202,120 120,120 120,108" fill="#155E75" />
+    <polygon points="202,120 120,120 120,132" fill="#0C2D42" />
+
+    <!-- ================= DYNAMIC 3D COMPASS NEEDLE & ARROW ================= -->
+    <!-- Rotated 45 degrees pointing towards North-East / Up-Right -->
+    <g id="growth-arrow" transform="rotate(45, 120, 120)">
+      <!-- Top Arrow Main Face (Vibrant Orange) -->
+      <path d="M 120,18 L 146,58 L 126,54 L 124,120 L 120,120 Z" fill="url(#orangeNeedleGrad)" />
+      <!-- Top Arrow Beveled 3D Edge (Cyan/Teal) -->
+      <path d="M 120,18 L 94,58 L 114,54 L 116,120 L 120,120 Z" fill="url(#tealFacetGrad)" />
+
+      <!-- Bottom Needle (Southwest Tail) -->
+      <polygon points="120,120 114,120 120,196" fill="#F97316" />
+      <polygon points="120,120 126,120 120,196" fill="#0E7490" />
+
+      <!-- Arrow Stem Highlight Line -->
+      <line x1="120" y1="20" x2="120" y2="194" stroke="#FFF" stroke-width="1.5" opacity="0.4" />
+    </g>
+
+    <!-- Center Pivot Hub (Silver/White with Dark Center) -->
+    <circle cx="120" cy="120" r="16" fill="#F8FAFC" stroke="#0F3854" stroke-width="4" />
+    <circle cx="120" cy="120" r="8" fill="#0F3854" />
+    <circle cx="120" cy="120" r="3.5" fill="#FFFFFF" />
+  </g>
+
+  <!-- ================= TYPOGRAPHY LOCKUP ================= -->
+  <g id="typography" transform="translate(0, 272)">
+    <!-- SKILLGAP -->
+    <text
+      x="200"
+      y="38"
+      text-anchor="middle"
+      font-family="'Montserrat', 'Inter', -apple-system, sans-serif"
+      font-weight="900"
+      font-size="44"
+      letter-spacing="0.04em"
+      fill="#0F334A"
+    >SKILLGAP</text>
+
+    <!-- COMPASS -->
+    <text
+      x="200"
+      y="84"
+      text-anchor="middle"
+      font-family="'Montserrat', 'Inter', -apple-system, sans-serif"
+      font-weight="900"
+      font-size="46"
+      letter-spacing="0.05em"
+      fill="#F97316"
+    >COMPASS</text>
+
+    <!-- NAVIGATE YOUR GROWTH -->
+    <text
+      x="200"
+      y="118"
+      text-anchor="middle"
+      font-family="'Montserrat', 'Inter', -apple-system, sans-serif"
+      font-weight="800"
+      font-size="14"
+      letter-spacing="0.24em"
+      fill="#EA580C"
+    >NAVIGATE YOUR GROWTH</text>
+  </g>
+</svg>

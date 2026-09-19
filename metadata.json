@@ -1,0 +1,8 @@
+{
+  "name": "Remix SkillPath AI",
+  "description": "Intelligent skill-gap analysis, career readiness scoring, and personalized dynamic learning roadmaps for students.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
